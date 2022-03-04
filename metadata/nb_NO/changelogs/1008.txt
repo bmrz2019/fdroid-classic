@@ -1,0 +1,4 @@
+* mange forbedringer i AppDetails-visningen. (658078058106ea868c7f90f675214ff120b6af3d for detaljer)
+* legg til den nye delen
+* Night Theme vil nå faktisk ha en svart bakgrunn
+* bruk den nye F-Droid-knappestilen

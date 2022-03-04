@@ -1,0 +1,9 @@
+* make it possible to scan repo QR codes from repositories screen
+* open media files from F-Droid repos in a browser instead of "installing" them
+* only show repo force-update options in expert mode
+* add swipe to refresh handling in the repo screen
+* fix bug where repo list didn't refresh after initial repo updating
+* allow uninstalling updates of system apps
+* make tab titles somewhat work again
+* link to correct repository from About screen
+* make app name not translatable

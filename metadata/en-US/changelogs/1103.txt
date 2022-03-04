@@ -1,0 +1,4 @@
+* Display Screenshots!
+* Add missing Liberapay and Open Collective donation options
+* Show translations links for apps that have them specified
+* Disable the F-Droid Classic repo by default for new installs

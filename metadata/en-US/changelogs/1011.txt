@@ -1,0 +1,5 @@
+* Change ranking in search results to prefer name and summary matches (thanks @gcbrown76)
+* Return recently updated list to original functionality (don't include newly added in the list)
+* Fix a crash when attempting to change the password for a password protected repo
+* Add an option to open the system app-info settings page for installed apps from F-Droid classic. Either use the menu entry or long-press the app-icon
+* Lots of internal code cleanup and dependency upgrades (thanks @TacoTheDank)

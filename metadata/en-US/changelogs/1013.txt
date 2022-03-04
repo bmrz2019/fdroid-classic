@@ -1,0 +1,4 @@
+* Fix installing upgrades when there are multiple apks signed by different keys (reproducible builds)
+* Fix fdroidrepos:// URIs sometimes not being recognized when adding a new repo
+* Add backup config (don't try to backup cached apks)
+* Add network security config (force always using https for some well-known urls)

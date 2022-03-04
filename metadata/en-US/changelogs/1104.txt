@@ -1,0 +1,3 @@
+* Fix a bunch of crashes that have been reported since the last beta
+* Some donation option tweaks
+* Translation and dependency updates

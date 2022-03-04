@@ -1,0 +1,5 @@
+* Feature: Display screenshots, all donation options and translation links
+* Feature: View apps from a single repo (via category spinner)
+* Feature: Refresh a single repo, force-refresh repositories and completely clear local cache
+* Fix translations in some cases preferring secondary locale over primary
+* Fix a few crashes

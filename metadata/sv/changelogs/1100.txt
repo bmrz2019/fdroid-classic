@@ -1,0 +1,5 @@
+* Implementera repo force refresh och db återställningsalternativ (#33)
+* Lägg till alternativ för att uppdatera en enda repo från arkivet detaljer
+* Visa appar från en enda repo genom att välja förvaret från kategorin spinner
+* Buggfixar och översättning förbättringar
+* Fasta översättningar föredrar sekundär lokal över primär (tack vare @spacecowboy)

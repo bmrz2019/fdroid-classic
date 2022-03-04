@@ -1,0 +1,4 @@
+* massor av förbättringar av appdetails view. (658078058106ea868c7f90f675214ff120b6af3d för detaljer)
+* lägg whatsnew avsnitt
+* Natt tema kommer nu faktiskt har en svart bakgrund
+* använd den nya F-Droid knapp stil

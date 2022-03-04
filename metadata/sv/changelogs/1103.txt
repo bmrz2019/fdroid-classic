@@ -1,0 +1,4 @@
+* Visa Skärmdumpar!
+* Lägg till saknade Liberapay och öppna kollektiva donationsalternativ
+* Visa översättningar länkar för appar som har dem specificerade
+* Inaktivera F-Droid Classic repo som standard för nya installationer

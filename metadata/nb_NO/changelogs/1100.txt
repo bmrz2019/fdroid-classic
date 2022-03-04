@@ -1,0 +1,5 @@
+* Implementere repo-kraftoppdaterings- og db-tilbakestillingsalternativer (# 33)
+* Legg til alternativet for å oppdatere en enkelt repo fra lagringsdetaljene
+* Se apper fra en enkelt repo ved å velge repository fra kategorisnurren
+* Feilrettinger og oversettelsesforbedringer
+* Faste oversettelser som foretrekker sekundær lokalitet fremfor primær (takket være @spacecowboy)

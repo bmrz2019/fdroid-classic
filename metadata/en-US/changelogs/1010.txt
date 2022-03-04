@@ -1,0 +1,5 @@
+* Slightly prettier About dialog                                                                                 
+* Theme changes apply instantly and not only on back button.
+* Add an "Update all" button to the menu, this might still be a bit buggy.
+* The download cancel button is now visible in night mode. It's also slightly bigger and has a ripple effect now.
+* Fix crash on phone boot

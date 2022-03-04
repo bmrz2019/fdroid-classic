@@ -1,0 +1,4 @@
+* Vis skjermbilder!
+* Legg til manglende donasjoner for Liberapay og Open Collective
+* Vis lenker for oversettelser for apper som har dem spesifisert
+* Deaktiver F-Droid Classic repo som standard for nye installasjoner

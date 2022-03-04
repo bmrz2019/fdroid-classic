@@ -1,0 +1,5 @@
+* Litt penere om dialog
+* Temaendringer gjelder øyeblikkelig og ikke bare på tilbake-knappen.
+* Legg til en "Oppdater alt" -knapp i menyen, dette kan fremdeles være litt buggy.
+* Nedlastningsknappen for nedlasting er nå synlig i nattmodus. Den er også litt større og har en ringeffekt nå.
+* Løs krasj på telefonstart

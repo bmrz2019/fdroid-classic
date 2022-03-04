@@ -1,0 +1,5 @@
+* Ändra ranking i sökresultat för att föredra namn och Sammanfattnings matcher (tack @gcbrown76)
+* Återgå nyligen uppdaterad lista till originalfunktionalitet (inkludera inte nytillkomna i listan)
+* Åtgärda en krasch när du försöker ändra lösenordet för ett lösenordsskyddat repo
+* Lägg till ett alternativ för att öppna systemet app-info inställningssidan för installerade appar från F-Droid classic. 
+* Massor av intern kod sanering (tack @TacoTheDank)

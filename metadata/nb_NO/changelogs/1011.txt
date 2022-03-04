@@ -1,0 +1,5 @@
+* Endre rangering i søkeresultatene for å foretrekke navn (takk @ gcbrown76)
+* Returner nylig oppdatert liste til original funksjonalitet (inkluderer ikke nylig lagt til i listen)
+* Løs et krasj når du prøver å endre passordet for en passordbeskyttet repo
+* Legg til et alternativ for å åpne innstillingssiden for systemapp-informasjon for installerte apper. Bruk enten menyoppføringen eller trykk lenge på appikonet
+* Mye intern kodeopprydding (takk @TacoTheDank)

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fab_action_enter_details"
+        android:icon="@drawable/ic_edit_white"
+        android:title="@string/add_repo_enter_details" />
+    <item
+        android:id="@+id/fab_action_scan_qr"
+        android:icon="@drawable/ic_camera_white"
+        android:title="@string/scan_qr_code" />
+</menu>

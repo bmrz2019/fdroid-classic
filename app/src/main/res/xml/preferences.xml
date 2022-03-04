@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/updates">
+        <ListPreference
+            android:defaultValue="24"
+            android:entries="@array/updateIntervalNames"
+            android:entryValues="@array/updateIntervalValues"
+            android:key="updateInterval"
+            android:title="@string/update_interval" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="updateOnWifiOnly"
+            android:title="@string/automatic_scan_wifi" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="updateAutoDownload"
+            android:summary="@string/update_auto_download_summary"
+            android:title="@string/update_auto_download" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="updateNotify"
+            android:title="@string/notify" />
+        <EditTextPreference
+            android:defaultValue="14"
+            android:inputType="number"
+            android:key="updateHistoryDays"
+            android:maxLength="2"
+            android:title="@string/update_history" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/display">
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/languageNames"
+            android:entryValues="@array/languageValues"
+            android:key="language"
+            android:title="@string/pref_language" />
+        <ListPreference
+            android:defaultValue="light"
+            android:entries="@array/themeNames"
+            android:entryValues="@array/themeValues"
+            android:key="theme"
+            android:title="@string/theme" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="screenshotsOnDemand"
+            android:title="@string/screenshots_on_demand"
+            android:summary="@string/screenshots_pref_summary"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/appcompatibility">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="incompatibleVersions"
+            android:title="@string/show_incompat_versions" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="rooted"
+            android:title="@string/rooted" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="hideAntiFeatureApps"
+            android:title="@string/hide_anti_feature_apps" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="ignoreTouchscreen"
+            android:title="@string/ignoreTouch" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/proxy">
+        <CheckBoxPreference
+            android:key="useTor"
+            android:summary="@string/useTorSummary"
+            android:title="@string/useTor" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enableProxy"
+            android:summary="@string/enable_proxy_summary"
+            android:title="@string/enable_proxy_title" />
+        <EditTextPreference
+            android:dependency="enableProxy"
+            android:key="proxyHost"
+            android:summary="@string/proxy_host_summary"
+            android:title="@string/proxy_host" />
+        <EditTextPreference
+            android:dependency="enableProxy"
+            android:key="proxyPort"
+            android:summary="@string/proxy_port_summary"
+            android:title="@string/proxy_port" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_category_other"
+        android:title="@string/other">
+        <ListPreference
+            android:defaultValue="86400000"
+            android:entries="@array/keepCacheNames"
+            android:entryValues="@array/keepCacheValues"
+            android:key="keepCacheFor"
+            android:title="@string/cache_downloaded" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="expert"
+            android:title="@string/expert" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="expert"
+            android:key="unstableUpdates"
+            android:summary="@string/unstable_updates_summary"
+            android:title="@string/unstable_updates" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="expert"
+            android:key="privilegedInstaller"
+            android:persistent="false"
+            android:title="@string/system_installer" />
+        <Preference
+            android:dependency="expert"
+            android:key="resetTransient"
+            android:summary="Removes and redownloads all app information."
+            android:title="Clear Cache and Reload" />
+    </PreferenceCategory>
+</PreferenceScreen>

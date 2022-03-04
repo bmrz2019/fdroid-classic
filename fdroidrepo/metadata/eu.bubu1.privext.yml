@@ -1,0 +1,23 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: Marcus Hoffmann
+AuthorEmail: bubu@bubu1.eu
+SourceCode: https://git.bubu1.eu/Bubu/privext
+IssueTracker: https://git.bubu1.eu/Bubu/privext/issues
+Translation: https://weblate.bubu1.eu/projects/f-droid-classic/
+LiberapayID: '27855'
+
+RepoType: git
+Repo: https://git.bubu1.eu/Bubu/privext
+
+Builds:
+  - versionName: 0.3
+    versionCode: 3000
+    commit: 0.3
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None

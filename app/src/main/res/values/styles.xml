@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ScreenShotActivityTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">@color/fdroid_night</item>
+    </style>
+
+    <style name="AppBaseThemeDark" parent="Theme.AppCompat">
+        <!-- backward-compatibility theme options go here -->
+        <item name="swipeRefreshLayoutProgressSpinnerBackgroundColor">@color/fdroid_night_light</item>
+        <item name="detailPanel">@drawable/details_panel_donate_background_dark</item>
+        <item name="colorPrimary">@color/fdroid_blue_dark</item>
+        <item name="colorPrimaryLight">@color/fdroid_blue</item>
+        <item name="colorPrimaryDark">@color/fdroid_blue_darkest</item>
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="android:textColorLink">@color/fdroid_green</item>
+        <item name="alertDialogTheme">@style/AlertDialogThemeDark</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppBaseThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- backward-compatibility theme options go here -->
+        <item name="detailPanel">@drawable/details_panel_donate_background_light</item>
+        <item name="colorPrimary">@color/fdroid_blue</item>
+        <item name="colorPrimaryLight">@color/fdroid_blue_dark</item>
+        <item name="colorPrimaryDark">@color/fdroid_blue_dark</item>
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="android:textColorLink">@color/fdroid_green</item>
+        <item name="alertDialogTheme">@style/AlertDialogThemeLight</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="toolbar_theme">@style/AppThemeLight.Toolbar</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppThemeDark" parent="AppBaseThemeDark">
+        <!-- customizations that are not API-level specific go here. -->
+    </style>
+
+    <style name="AppThemeLight" parent="AppBaseThemeLight">
+        <!-- customizations that are not API-level specific go here. -->
+    </style>
+
+    <style name="AppThemeNight" parent="AppThemeDark">
+        <!-- customizations that are not API-level specific go here. -->
+        <item name="swipeRefreshLayoutProgressSpinnerBackgroundColor">@color/fdroid_night</item>
+        <item name="detailPanel">@drawable/details_panel_donate_background_night</item>
+        <item name="colorPrimary">@color/fdroid_night</item>
+        <item name="colorPrimaryLight">@color/fdroid_night_light</item>
+        <item name="colorPrimaryDark">@color/fdroid_night_dark</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="AlertDialogBaseThemeDark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    </style>
+
+    <style name="AlertDialogBaseThemeLight" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    </style>
+
+    <style name="AlertDialogThemeDark" parent="AlertDialogBaseThemeDark">
+        <item name="colorAccent">@color/fdroid_green</item>
+    </style>
+
+    <style name="AlertDialogThemeLight" parent="AlertDialogBaseThemeLight">
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    </style>
+
+    <style name="AppDetailsLink" parent="AppDetailsLinkBase">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MinWithDialogBaseThemeDark" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="colorPrimary">@color/fdroid_blue_dark</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MinWithDialogBaseThemeNight" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="colorPrimary">@color/fdroid_night</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MinWithDialogBaseThemeLight" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">@color/fdroid_green</item>
+        <item name="colorPrimary">@color/fdroid_blue</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <!-- use this style for a text view that is a caption to a paragraph of text -->
+    <style name="CaptionText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Caption</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <!-- use this style for a text views that is a paragraph of text -->
+    <style name="BodyText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:lineSpacingMultiplier">1.25</item>
+    </style>
+
+    <style name="AppList">
+        <item name="android:id">@android:id/list</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fastScrollEnabled">true</item>
+    </style>
+
+    <style name="AppListEmptyText">
+        <item name="android:id">@android:id/empty</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--
+      We need to support either light or dark coloured toolbars. Most tutorials online about styling
+      the Toolbar widget revolve around one style only, which is not conditioned on the current theme.
+      See http://stackoverflow.com/a/32789928/2391921 for this solution.
+    -->
+    <attr name="toolbar_theme" format="reference" />
+
+    <style name="AppThemeLight.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/fdroid_blue</item>
+    </style>
+
+    <style name="AppDetailsLinkBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/material_listitem_height</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppDetailsSubheaderTextBase">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/material_listitem_height</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">12dp</item>
+    </style>
+
+    <style name="AppDetailsSubheaderText" parent="AppDetailsSubheaderTextBase" />
+
+    <style name="AppThemeTransparent" parent="@android:style/Theme.NoDisplay" />
+
+    <style name="AppThemeLight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

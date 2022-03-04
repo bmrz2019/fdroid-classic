@@ -1,0 +1,5 @@
+* Lite snyggare om dialog
+* Temaändringar gäller direkt och inte bara på bakåtknappen.
+* Lägg till en "Uppdatera alla" -knapp i menyn, det kan fortfarande vara lite buggy.
+* Nedladdningsknappen är nu synlig i nattläge. Det är också något större och har en krusningseffekt nu.
+* Fixa krasch vid telefonstart

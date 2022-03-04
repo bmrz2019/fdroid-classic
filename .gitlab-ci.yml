@@ -1,0 +1,31 @@
+image: jangrewe/gitlab-ci-android
+
+lint+test+build:
+  script:
+    - export GRADLE_USER_HOME=$(pwd)/.gradle
+    # always report on lint errors to the build log
+    - sed -i -e 's,textReport .*,textReport true,' app/build.gradle
+    - ./gradlew lint
+    - ./gradlew testReleaseUnitTest
+    - ./gradlew assembleDebug
+  artifacts:
+    paths:
+    - app/build/reports/
+
+fdroid:build:
+  before_script:
+    - apt-get update && apt-get dist-upgrade  -y && apt-get install -y gnupg python3-pip
+    - mkdir fdroidserver
+    - commit=$(git ls-remote https://git.bubu1.eu/Bubu/fdroidserver.git main | cut -f1)
+    - echo "Using fdroidserver ${commit}"
+    - curl --silent https://git.bubu1.eu/Bubu/fdroidserver/-/archive/${commit}/fdroidserver-${commit}.tar.gz
+        | tar -xz --directory=fdroidserver --strip-components=1
+    - pushd fdroidserver && pip install -e . && popd
+    - export PATH="$PWD/fdroidserver:$PATH"
+    - ln -s fdroidserver/gradlew-fdroid fdroidserver/gradle
+    - export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+  script:
+    - cd fdroidrepo
+    - PYTHONPATH=. fdroid gencibuild eu.bubu1.fdroidclassic
+    - fdroid build --stop -v -l eu.bubu1.fdroidclassic

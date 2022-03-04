@@ -1,0 +1,4 @@
+* Fix installasjonsoppgraderinger når det er flere apk signert av forskjellige nøkler (reproduserbare builds)
+* Fix fdroidrepos: // URI blir noen ganger ikke gjenkjent når du legger til en ny repo
+* Legg til sikkerhetskopikonfigurasjon (ikke prøv å sikkerhetskopiere hurtigbufrede apks)
+* Legg til nettverkssikkerhetskonfigurasjon (bruk alltid https for noen kjente nettadresser)

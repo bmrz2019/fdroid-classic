@@ -1,0 +1,196 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: Marcus Hoffmann
+AuthorEmail: bubu@bubu1.eu
+SourceCode: https://git.bubu1.eu/Bubu/fdroidclassic
+IssueTracker: https://git.bubu1.eu/Bubu/fdroidclassic/issues
+Translation: https://weblate.bubu1.eu/projects/f-droid-classic/
+Changelog: https://git.bubu1.eu/Bubu/fdroidclassic/-/blob/main/CHANGELOG.md
+LiberapayID: '27855'
+
+RepoType: git
+Repo: https://git.bubu1.eu/Bubu/fdroidclassic.git
+
+Builds:
+  - versionName: 1.0-beta1
+    versionCode: 1000
+    commit: v1.0-beta1
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta2
+    versionCode: 1001
+    commit: v1.0-beta2
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta3
+    versionCode: 1002
+    commit: v1.0-beta3
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta4
+    versionCode: 1003
+    commit: v1.0-beta4
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta5
+    versionCode: 1004
+    commit: v1.0-beta5
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta6
+    versionCode: 1005
+    commit: v1.0-beta6
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta8
+    versionCode: 1007
+    commit: v1.0-beta8
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta9
+    versionCode: 1008
+    commit: v1.0-beta9
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta10
+    versionCode: 1010
+    commit: v1.0-beta10
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-beta11
+    versionCode: 1011
+    commit: v1.0-beta11
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+      - app/src/androidTest
+
+  - versionName: 1.0-rc1
+    versionCode: 1012
+    commit: v1.0-rc1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-rc2
+    versionCode: 1013
+    commit: v1.0-rc2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0
+    versionCode: 1014
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta1
+    versionCode: 1100
+    commit: v1.1-beta1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta2
+    versionCode: 1101
+    commit: v1.1-beta2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta3
+    versionCode: 1103
+    commit: v1.1-beta3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta4
+    versionCode: 1104
+    commit: v1.1-beta4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1-rc1
+    versionCode: 1105
+    commit: v1.1-rc1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1
+    versionCode: 1106
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2-beta1
+    versionCode: 1107
+    commit: v1.2-beta1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2-beta2
+    versionCode: 1108
+    commit: v1.2-beta2
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.1
+CurrentVersionCode: 1106

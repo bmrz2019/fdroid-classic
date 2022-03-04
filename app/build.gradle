@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+// keep some basic stuff from the android.jar platform code
+// see https://github.com/bjoernQ/unmock-plugin#how-to-use
+apply plugin: 'de.mobilej.unmock'
+
+/* gets the version name from the latest Git tag */
+def getVersionName = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'describe', '--tags', '--always'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim().substring(1)
+}
+
+repositories {
+    mavenCentral()
+    google()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // androidX stuff
+    implementation 'androidx.appcompat:appcompat:1.4.0-rc01'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    // general support library
+    implementation 'com.google.guava:guava:30.1.1-android'
+    // image loading
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    // FAB-menu/speed-dial
+    // noinspection GradleDependency - https://github.com/leinardi/FloatingActionButtonSpeedDial/issues/168
+    implementation 'com.github.leinardi:FloatingActionButtonSpeedDial:3.1.1'
+    // QR
+    implementation('com.journeyapps:zxing-android-embedded:4.2.0') { transitive = false }
+    // noinspection GradleDependency - needed for SDK 23 compatibility, in combination with com.journeyapps:zxing-android-embedded:4.1.0
+    implementation 'com.google.zxing:core:3.3.3'
+    // Tor proxy support
+    implementation 'info.guardianproject.netcipher:netcipher:2.1.0'
+    // crash reports
+    implementation 'com.github.ligi.tracedroid:lib:d0048245ab'
+    implementation 'com.github.ligi.tracedroid:supportemail:d0048245ab'
+    // index-json parsing
+    def jackson_version = "2.12.4"
+    implementation "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+
+    // Don't update this to junit5 or remove this, it makes Roboelectric tests fail with SIGSEGV (what?)
+    // https://git.bubu1.eu/Bubu/fdroidclassic/-/jobs/666
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "org.mockito:mockito-core:3.10.0"
+    testImplementation "com.google.truth:truth:1.1.2"
+    testImplementation 'androidx.test:core:1.4.0'
+    testImplementation 'org.robolectric:robolectric:4.6.1'
+}
+
+def myApplicationId = "eu.bubu1.fdroidclassic"
+def privilegedExtensionApplicationId = '"eu.bubu1.privext"'
+def privilegedExtensionApplicationIdFallback1 = '"org.fdroid.fdroid.privileged.do"'
+def privilegedExtensionApplicationIdFallback2 = '"org.fdroid.fdroid.privileged.root"'
+
+
+android {
+    compileSdkVersion 31
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+        all {
+            buildConfigField "String", "PRIVILEGED_EXTENSION_PACKAGE_NAME", privilegedExtensionApplicationId
+            buildConfigField "String", "PRIVILEGED_EXTENSION_PACKAGE_NAME_FALLBACK1", privilegedExtensionApplicationIdFallback1
+            buildConfigField "String", "PRIVILEGED_EXTENSION_PACKAGE_NAME_FALLBACK2", privilegedExtensionApplicationIdFallback2
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            resValue "string", "applicationId", myApplicationId + applicationIdSuffix
+            versionNameSuffix "-debug"
+            println 'buildTypes.debug defaultConfig.versionCode ' + defaultConfig.versionCode
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    compileOptions {
+        encoding = "UTF-8"
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 25
+        versionCode 1108
+        applicationId myApplicationId
+        resValue "string", "applicationId", myApplicationId
+        versionName getVersionName()
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError true
+
+        htmlReport true
+        xmlReport false
+        textReport false
+
+        // Our translations are crowd-sourced
+        disable 'MissingTranslation'
+
+        error 'AppCompatMethod', 'NestedScrolling', 'StringFormatCount', 'UnsafeProtectedBroadcastReceiver'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude '.readme'
+    }
+}

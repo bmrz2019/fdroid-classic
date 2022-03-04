@@ -1,0 +1,4 @@
+* Fix installera uppgraderingar när det finns flera apks signerade av olika nycklar ( reproducerbara bygger)
+* Fix fdroidrepos: / / URIs ibland inte känns igen när du lägger till en ny repo
+* Lägg backup config (försök inte att säkerhetskopiera cachade apks)
+* Lägg till nätverkssäkerhet config (tvinga alltid använda https för vissa välkända webbadresser)

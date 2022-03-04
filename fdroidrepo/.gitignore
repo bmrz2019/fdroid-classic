@@ -1,0 +1,11 @@
+keystore.jks
+config.py
+/repo
+/tmp
+/unsigned
+/build
+.logs
+/fdroid-icon.png
+builder/
+stats/publishsigkeys.jar
+/__pycache__
