@@ -25,9 +25,9 @@
         </item>
 
         <!-- name -->
-        <item>F-Droid</item>
+        <item>F-Droid Cloudflare</item>
         <!-- address -->
-        <item>https://ftp.fau.de/fdroid/repo/</item>
+        <item>https://cloudflare.f-droid.org/repo</item>
         <!-- description -->
         <item>The official F-Droid repository. Applications in this repository are built
             directly from the source code.
