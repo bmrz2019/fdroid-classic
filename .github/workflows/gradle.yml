@@ -22,12 +22,10 @@ jobs:
             -   name: setup output
                 run: |
                      echo "TIME_NOW=$(date "+%Y.%m.%d-%H.%M.%S")" >> $GITHUB_ENV
-            
-            -   name: Upload binaries to release
-                uses: svenstaro/upload-release-action@v2
+
+            -   name: Upload artifact to GitHub
+                uses: actions/upload-artifact@v2
                 with:
-                    repo_token: ${{ secrets.FDROID_CLASSIC_SECRET }}
-                    file: ./app/build/outputs/apk/debug/app-debug.apk
-                    #tag: ${{ env.TIME_NOW }}
-                    tag: ${{ github.ref }}
-                    body: "This is my release text"
+                    name: storage-usb-debug.apk
+                    path: ./app/build/outputs/apk/debug/app-debug.apk
+
